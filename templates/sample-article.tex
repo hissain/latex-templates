@@ -1,0 +1,43 @@
+
+\documentclass[10pt, a4paper, oneside]{article}
+
+\usepackage[nodayofweek]{datetime}
+\usepackage{lipsum} 
+
+\newdateformat{myday}{\twodigit{\THEDAY}{ }\shortmonthname[\THEMONTH], \THEYEAR}
+
+\title{\normalfont{Technical Report: Loren Ipsum}} 
+
+\author{{Alex Murphy}}
+\myday
+
+\begin{document}
+
+\maketitle
+\frenchspacing
+
+\section*{Abstract} 
+
+Test cite \cite{key1, key2, key3}  \lipsum[1] % Dummy text
+
+\section{Introduction}
+ \lipsum[1] 
+ 
+ \newpage
+ \section{Background}
+ \lipsum[1] 
+ \subsection{Related Works}
+ \lipsum[4]
+ 
+ \subsection{Technology}
+\lipsum[2-4]
+
+\begin{thebibliography}{1}
+
+\bibitem{key1} John Doe {\em Title and stuff}  2013.
+\bibitem{key2} John Doe {\em Title and stuff}  2014.
+\bibitem{key3} John Doe {\em Title and stuff}  2015.
+
+\end{thebibliography}
+
+\end{document}
